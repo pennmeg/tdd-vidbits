@@ -5,9 +5,9 @@ describe('visits landing page', () => {
       browser.url('/');
       assert.equal(browser.getText('#videos-container'), '');
     });
-    it('navigate to videos/create', () => {
+    it('navigate to /videos/create', () => {
       browser.url('/');
-      browser.click('.add-video-button');
+      browser.click('.add-video');
       assert.include(browser.getText('body'), 'Save a video');
     });
   });
